@@ -28,8 +28,8 @@ Contributions are welcome! Check out the [Contributing Guidelines](CONTRIBUTING.
 
 [![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
 
-To the extent possible under law, [{{ cookiecutter.author }}](https://github.com/{{ cookiecutter.github_username }}) has waived all copyright and related or neighboring rights to this work.
+To the extent possible under law, [{{ cookiecutter.author_name }}](https://github.com/{{ cookiecutter.github_username }}) has waived all copyright and related or neighboring rights to this work.
 
 ## Contact
 
-For support or inquiries, please contact [{{ cookiecutter.author }}](https://github.com/{{ cookiecutter.github_username }}) at [{{ cookiecutter.github_email }}](mailto:{{ cookiecutter.github_email }})
+For support or inquiries, please contact [{{ cookiecutter.author_name }}](https://github.com/{{ cookiecutter.github_username }}) at [{{ cookiecutter.github_email }}](mailto:{{ cookiecutter.github_email }})
