@@ -1,0 +1,10 @@
+{
+    "======================== INFO =======================": " ",
+    "project_name": "CookiePyStarter",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "description": "A short description of the project.",
+    
+    "author": "Your name (or your organization/company/team)",
+    "github_username": "your_github_username",
+    "github_email": "your_email@example.com"
+}
