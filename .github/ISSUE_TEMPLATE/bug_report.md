@@ -1,41 +1,75 @@
 ---
-name: "🐛 Bug Report"
-about: Report a reproducible bug or regression.
-title: 'Bug: '
-labels: 'Status: Unconfirmed'
+name: 🐞 Bug Report
+description: Create a report to help us improve CookiePyStarter by reproducing and fixing bugs
+title: "Bug: "
+labels:
+  - "app"
 
----
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Thanks :heart: for taking the time to fill out this bug report!**
+        We kindly ask that you search to see if an issue [already exists](https://github.com/mramitdas/CookiePyStarter/issues?q=is%3Aissue+sort%3Acreated-desc+) for the bug you encountered.
 
-<!--
-  Please provide a clear and concise description of what the bug is. Include
-  screenshots if needed. Please test using the latest version of the relevant
-  Python packages to make sure your issue has not already been fixed.
--->
+  - type: textarea
+    attributes:
+      label: Current Behavior
+      description: |
+        A clear and concise description of the issue you're experiencing.
+    validations:
+      required: false
 
-Python version:
+  - type: textarea
+    attributes:
+      label: Expected Behavior
+      description: |
+        A clear and concise description of what you expected to happen.
+    validations:
+      required: false
 
-## Steps To Reproduce
+  - type: textarea
+    attributes:
+      label: Steps To Reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: false
 
-1.
-2.
+  - type: textarea
+    attributes:
+      label: Screenshots
+      description: |
+        If applicable, add screenshots to help explain your problem.
 
-<!--
-  Your bug will get fixed much faster if we can run your code and it doesn't
-  have dependencies other than Python. Issues without reproduction steps or
-  code examples may be immediately closed as not actionable.
--->
+        Tip: You can attach images or log files by clicking this area to highlight it and then dragging files in.
+    validations:
+      required: false
 
-Link to code example:
+  - type: textarea
+    attributes:
+      label: Environment
+      description: |
+        Information about your environment where you see the bug.
 
-<!--
-  Please provide a CodeSandbox (https://codesandbox.io/s/new), a link to a
-  repository on GitHub, or provide a minimal code example that reproduces the
-  problem. You may provide a screenshot of the application if you think it is
-  relevant to your bug report. Here are some tips for providing a minimal
-  example: https://stackoverflow.com/help/mcve.
--->
+      value: |
+        OS:
 
-## The current behavior
+        Browsers (if any):
 
+        Python Version:
 
-## The expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Additional Context
+      description: |
+        Add any other context about the problem here.
+    validations:
+      required: false
