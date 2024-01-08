@@ -1,5 +1,4 @@
 {
-    "======================== INFO =======================": " ",
     "project_name": "CookiePyStarter",
     "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
     "description": "A short description of the project.",
