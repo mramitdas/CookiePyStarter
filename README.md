@@ -1,7 +1,7 @@
 <p align="center">
   <img width="150" src="media/logo.png" alt="CookiePyStarter">
   <h3 align="center">CookiePyStarter</h3>
-  <p align="center">a factory for building bleeding edge, best practiced, scalable, rest apis</p>
+  <p align="center">Crafting cutting-edge, Python boilerplate with a thoughtful design, essential components, and a seamless setup experience.</p>
   <p align="center">
     <a href="https://github.com/mramitdas/CookiePyStarter/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot">
       <img src="https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg" alt="Dependencies Status">
