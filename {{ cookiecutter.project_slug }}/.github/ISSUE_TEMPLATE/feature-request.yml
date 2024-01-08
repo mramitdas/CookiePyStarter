@@ -1,6 +1,6 @@
 ---
 name: 🛠️ Feature Request
-description: Suggest an idea to help us improve CookiePyStarter
+description: Suggest an idea to help us improve {{ cookiecutter.project_name }}
 title: "Feature: "
 labels:
   - "feature_request"
@@ -10,9 +10,9 @@ body:
     attributes:
       value: |
         **Thanks :heart: for taking the time to fill out this feature request report!**
-        We kindly ask that you search to see if an issue [already exists](https://github.com/mramitdas/CookiePyStarter/issues?q=is%3Aissue+sort%3Acreated-desc+) for your feature.
+        We kindly ask that you search to see if an issue [already exists](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/issues?q=is%3Aissue+sort%3Acreated-desc+) for your feature.
 
-        We are also happy to accept contributions from our users. For more details see [here](https://github.com/mramitdas/CookiePyStarter/blob/prod/CONTRIBUTING.md).
+        We are also happy to accept contributions from our users. For more details see [here](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/blob/{{ cookiecutter.github_branch }}/CONTRIBUTING.md).
 
   - type: textarea
     attributes:

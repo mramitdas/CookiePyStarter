@@ -1,6 +1,6 @@
 ---
 name: 🐞 Bug Report
-description: Create a report to help us improve CookiePyStarter by reproducing and fixing bugs
+description: Create a report to help us improve {{ cookiecutter.project_name }} by reproducing and fixing bugs
 title: "Bug: "
 labels:
   - "app"
@@ -10,7 +10,7 @@ body:
     attributes:
       value: |
         **Thanks :heart: for taking the time to fill out this bug report!**
-        We kindly ask that you search to see if an issue [already exists](https://github.com/mramitdas/CookiePyStarter/issues?q=is%3Aissue+sort%3Acreated-desc+) for the bug you encountered.
+        We kindly ask that you search to see if an issue [already exists](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/issues?q=is%3Aissue+sort%3Acreated-desc+) for the bug you encountered.
 
   - type: textarea
     attributes:
