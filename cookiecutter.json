@@ -6,5 +6,6 @@
     
     "author": "Your name (or your organization/company/team)",
     "github_username": "your_github_username",
-    "github_email": "your_email@example.com"
+    "github_email": "your_email@example.com",
+    "github_branch": "main"
 }
