@@ -30,6 +30,7 @@ Homepage = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutte
 [dependency-groups]
 dev = [
     "mypy",
+    "pre-commit",
     "pytest",
     "pytest-cov",
     "ruff",
@@ -46,7 +47,6 @@ select = ["E", "F", "I", "UP", "B"]
 [tool.mypy]
 strict = true
 mypy_path = "src"
-packages = ["{{ cookiecutter.package_name }}"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
