@@ -2,7 +2,9 @@
   <img src="media/logo.png" width="150" alt="CookiePyStarter Logo">
 </p>
 
-<h1 align="center">CookiePyStarter — Modern Python Cookiecutter Template</h1>
+# CookiePyStarter
+
+<h3 align="center">Modern Python Cookiecutter Template</h3>
 
 <p align="center">
   <strong>The modern, green-on-first-render Python project generator.</strong><br>
