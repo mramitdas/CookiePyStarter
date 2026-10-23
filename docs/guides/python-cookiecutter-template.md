@@ -72,8 +72,8 @@ are never merged broken.
 - Add optional files and delete them in the post-generation hook
   (`remove_optional_paths`) when the option is off.
 - Keep hook logic pure Python — it runs on Windows too.
-- Wrap literal `{{ }}` inside generated GitHub Action files in Jinja
-  `{% raw %}` blocks, or expressions like `${{ github.ref }}` will vanish.
+- Wrap literal Jinja expressions inside generated GitHub Action files in a
+  Jinja raw-tag block, or the GitHub Actions expressions will vanish.
 
 ## Get started
 
