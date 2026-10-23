@@ -1,0 +1,44 @@
+name: Render Test
+
+on:
+  push:
+    branches: [main, prod]
+  pull_request:
+
+jobs:
+  render:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        config: [default, docker, apache]
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+      - name: Render template
+        shell: bash
+        run: |
+          case "${{ matrix.config }}" in
+            docker) uvx cookiecutter . --no-input -o out docker=yes ;;
+            apache) uvx cookiecutter . --no-input -o out license="Apache-2.0" ;;
+            *) uvx cookiecutter . --no-input -o out ;;
+          esac
+      - name: Verify raw GitHub expressions survive rendering
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          grep -F '${''{ github.ref }}' out/my_awesome_project/.github/workflows/ci.yml
+          grep -F 'uv python install 3.12' out/my_awesome_project/.github/workflows/ci.yml
+      - name: Run checks in generated project
+        shell: bash
+        run: |
+          cd out/my_awesome_project
+          uv sync
+          uv run ruff check .
+          uv run ruff format --check .
+          uv run mypy src/
+          uv run pytest
