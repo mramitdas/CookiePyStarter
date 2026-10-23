@@ -1,0 +1,10 @@
+site_name: {{ cookiecutter.project_name }}
+site_description: "{{ cookiecutter.project_description }}"
+theme:
+  name: material
+nav:
+  - Home: index.md
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
