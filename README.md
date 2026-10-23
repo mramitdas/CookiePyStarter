@@ -1,8 +1,24 @@
+<p align="center">
+  <img src="media/logo.png" width="150" alt="CookiePyStarter Logo">
+</p>
+
 <h1 align="center">CookiePyStarter — Modern Python Cookiecutter Template</h1>
 
 <p align="center">
-  <strong>The modern Python cookiecutter template.</strong><br>
+  <strong>The modern, green-on-first-render Python project generator.</strong><br>
   uv · ruff · mypy · pytest · pre-commit · GitHub Actions · optional Docker & docs — in one command.
+</p>
+
+<p align="center">
+  <a href="#quickstart-30-seconds">
+    <img src="https://img.shields.io/badge/%F0%9F%9A%80_Quickstart-30_Seconds-0070f3?style=for-the-badge&logoColor=white" alt="Quickstart">
+  </a>
+  <a href="https://mramitdas.github.io/CookiePyStarter/">
+    <img src="https://img.shields.io/badge/%F0%9F%93%96_Documentation-GitHub_Pages-2ea44f?style=for-the-badge&logoColor=white" alt="Docs">
+  </a>
+  <a href="https://github.com/mramitdas/CookiePyStarter/releases/tag/v1.0.0">
+    <img src="https://img.shields.io/badge/%F0%9F%93%A6_Release-v1.0.0-8a2be2?style=for-the-badge&logoColor=white" alt="Release">
+  </a>
 </p>
 
 <p align="center">
@@ -14,6 +30,10 @@
   <img src="https://img.shields.io/badge/code%20style-ruff-261230.svg" alt="Code style: ruff">
 </p>
 
+<p align="center">
+  <img src="media/demo.gif" width="100%" alt="CookiePyStarter Terminal Demo">
+</p>
+
 CookiePyStarter is a [Cookiecutter](https://github.com/cookiecutter/cookiecutter)
 template that generates the Python project you always end up hand-rolling:
 a [uv](https://docs.astral.sh/uv/)-managed, src-layout package wired with
@@ -22,6 +42,41 @@ Actions CI — **and every generated project is green on first render** (the
 generator itself runs lint, type check, and tests before it hands you the keys).
 
 Works with the stock cookiecutter CLI — nothing else to install.
+
+## Why Choose CookiePyStarter?
+
+<table>
+  <tr>
+    <td width="50%">
+      <h3>⚡ Green on First Render</h3>
+      <p>Post-generation hook runs <code>uv sync</code>, <code>pre-commit install</code>, <code>ruff</code>, <code>mypy --strict</code>, and <code>pytest</code>. Your project passes every check before you even CD into it.</p>
+    </td>
+    <td width="50%">
+      <h3>🚀 Instant uv Dependency Sync</h3>
+      <p>Built native for <a href="https://docs.astral.sh/uv/">uv</a> with modern PEP 621 metadata and PEP 735 dependency groups. Zero legacy <code>requirements/*.txt</code> or <code>setup.sh</code> files.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>🛡️ Strict Quality Gates</h3>
+      <p>Shipped with <code>ruff</code> (lint + format), <code>mypy --strict</code> type checking, and non-vacuous <code>pytest</code> suite with coverage pre-configured in <code>pyproject.toml</code>.</p>
+    </td>
+    <td width="50%">
+      <h3>📜 Selectable Licensing</h3>
+      <p>Prompt-driven license generation: choose <strong>MIT</strong>, <strong>Apache-2.0</strong>, <strong>BSD-3-Clause</strong>, or <strong>CC0 (None)</strong>. The post-gen hook bakes author & year cleanly.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>🐳 Optional Docker & Docs</h3>
+      <p>Opt-in during generation for a multi-stage <code>Dockerfile</code> and a complete <a href="https://squidfunk.github.io/mkdocs-material/">mkdocs-material</a> site scaffold.</p>
+    </td>
+    <td width="50%">
+      <h3>🧪 Multi-OS CI Matrix</h3>
+      <p>Every generated project includes a zero-config <code>.github/workflows/ci.yml</code> pipeline, while CookiePyStarter itself tests renders across Ubuntu & Windows matrix.</p>
+    </td>
+  </tr>
+</table>
 
 ## Quickstart (30 seconds)
 
@@ -34,6 +89,17 @@ already passes `ruff check`, `ruff format --check`, `mypy --strict`, and
 `pytest` — plus an initial git commit and pre-commit hooks installed.
 
 Prefer pip? `pipx run cookiecutter gh:mramitdas/CookiePyStarter` works too.
+
+## How It Works
+
+```mermaid
+flowchart LR
+    A["10 Prompts"] --> B["Jinja2 Rendering"]
+    B --> C["Post-Gen Hook"]
+    C --> D["uv sync & git init"]
+    D --> E["ruff & mypy & pytest"]
+    E --> F["🎉 Green Project Ready"]
+```
 
 ## What you get
 
@@ -48,6 +114,10 @@ my_awesome_project/
 ├── README, CHANGELOG, CONTRIBUTING, CODE_OF_CONDUCT, SECURITY
 └── Dockerfile + mkdocs.yml     # only when you opted in
 ```
+
+<p align="center">
+  <img src="media/ci-green.png" width="100%" alt="GitHub Actions Render Matrix Passed">
+</p>
 
 Every dependency lives in `pyproject.toml` (PEP 735 dependency groups) — no
 `requirements/` files, no `setup.sh`, no deserted tooling.
@@ -92,10 +162,10 @@ CookiePyStarter is deliberately framework-agnostic.
 
 Long-form guides live in [`docs/`](docs/) and are published on GitHub Pages:
 
-- Python cookiecutter template — how to use and extend
-- uv + cookiecutter — dependency management that doesn't hurt
-- Modern Python project structure — why src layout wins
-- Python boilerplate generator — picking the right starting point
+- [Python cookiecutter template](https://mramitdas.github.io/CookiePyStarter/guides/python-cookiecutter-template.html) — how to use and extend
+- [uv + cookiecutter](https://mramitdas.github.io/CookiePyStarter/guides/uv-cookiecutter.html) — dependency management that doesn't hurt
+- [Modern Python project structure](https://mramitdas.github.io/CookiePyStarter/guides/modern-python-project-structure.html) — why src layout wins
+- [Python boilerplate generator](https://mramitdas.github.io/CookiePyStarter/guides/python-boilerplate-generator.html) — picking the right starting point
 
 ## Requirements
 
