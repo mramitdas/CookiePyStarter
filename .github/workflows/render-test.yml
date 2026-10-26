@@ -2,7 +2,7 @@ name: Render Test
 
 on:
   push:
-    branches: [main, prod]
+    branches: [prod]
   pull_request:
 
 jobs:

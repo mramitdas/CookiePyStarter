@@ -28,7 +28,7 @@ Standing approvals for autonomous work are recorded in
 
 ### Branch layout
 
-- `main` — default/protected branch. Merges happen via PR only. (Legacy `prod`/`dev`/`stag` branches are archived history; nothing is deleted without explicit approval.)
+- `prod` — default/protected branch. Merges happen via PR only. (`dev`/`stag` and the retired `main` are archived history; nothing is deleted without explicit approval.)
 
 ---
 
@@ -143,7 +143,7 @@ ask instead of guessing.
   - acceptance criteria demonstrably met,
   - docs updated if behavior/setup changed.
 - Issue is closed **only** after its PR is merged. Never close otherwise.
-- Never commit or PR directly to protected branches (`main`), even for docs.
+- Never commit or PR directly to protected branches (`prod`), even for docs.
   No skip-hooks (`--no-verify`), no force-pushing.
 
 ### 4. Task granularity & tracking
@@ -169,7 +169,7 @@ ask instead of guessing.
 - The following require explicit, current-session user approval before
   running: `git push --force`, branch deletion, dropping/updating-down DB
   migrations, deleting files beyond the current task's scope, publishing or
-  releasing, and anything modifying `main`/`prod` history.
+  releasing, and anything modifying `prod` history.
 - Never touch files outside the workspace directory.
 
 ### 7. On session start

@@ -9,7 +9,7 @@ It is referenced by `AGENTS.md` (Guardrails & Boundaries).
 - Creating/deleting agent-created branches (`<type>/<issue#>-<slug>`).
 - Commits, pushes to agent-created branches, and `origin` remote operations.
 - Creating/updating/closing GitHub issues and comments.
-- Creating PRs targeting the default branch (`main`) and **merging own PRs**
+- Creating PRs targeting the default branch (`prod`) and **merging own PRs**
   (`gh pr merge --merge --delete-branch`) once PR checklist gates pass
   (tests pass, ruff check / ruff format --check / mypy clean,
   no secrets, AC met, docs updated).
