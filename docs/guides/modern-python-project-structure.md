@@ -23,6 +23,7 @@ my_awesome_project/
 ├── .github/workflows/ci.yml
 ├── README.md, CHANGELOG.md, LICENSE, CONTRIBUTING.md,
 ├── CODE_OF_CONDUCT.md, SECURITY.md
+├── AGENTS.md, STANDING_APPROVALS.md
 └── .gitignore
 ```
 

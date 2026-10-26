@@ -33,6 +33,18 @@ jobs:
         run: |
           grep -F '${''{ github.ref }}' out/my_awesome_project/.github/workflows/ci.yml
           grep -F 'uv python install 3.12' out/my_awesome_project/.github/workflows/ci.yml
+      - name: Verify agent governance files render
+        shell: bash
+        run: |
+          cd out/my_awesome_project
+          test -f AGENTS.md
+          test -f STANDING_APPROVALS.md
+          grep -q 'Guardrails & Boundaries' AGENTS.md
+          grep -q 'Standing Approvals' STANDING_APPROVALS.md
+          if grep -nE '\{\{|\{%' AGENTS.md STANDING_APPROVALS.md; then
+            echo "ERROR: unrendered Jinja leftovers in agent governance files"
+            exit 1
+          fi
       - name: Run checks in generated project
         shell: bash
         run: |
