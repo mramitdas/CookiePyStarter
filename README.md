@@ -114,6 +114,7 @@ my_awesome_project/
 ├── .github/workflows/ci.yml    # GitHub Actions: lint + typecheck + tests
 ├── LICENSE                     # your choice: MIT / Apache-2.0 / BSD-3-Clause / CC0
 ├── README, CHANGELOG, CONTRIBUTING, CODE_OF_CONDUCT, SECURITY
+├── AGENTS.md + STANDING_APPROVALS.md   # rules for AI coding agents
 └── Dockerfile + mkdocs.yml     # only when you opted in
 ```
 

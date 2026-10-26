@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- Generated projects now include `AGENTS.md` and `STANDING_APPROVALS.md`:
+  agent rules (stack, commands, layout, guardrails) and standing approvals,
+  rendered per project.
+- Render-test CI asserts the agent governance files render without leftover
+  Jinja.
+
 ## [1.0.0] - 2026-10-23
 
 The 2026 rebuild: CookiePyStarter as a modern Python cookiecutter template.

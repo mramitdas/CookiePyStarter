@@ -19,6 +19,8 @@ uv run mypy src/             # type-check
 src/{{ cookiecutter.package_name }}/   # your package (src layout)
 tests/               # pytest tests
 pyproject.toml       # project metadata + tool config
+AGENTS.md            # rules for AI coding agents (commands, conventions, guardrails)
+STANDING_APPROVALS.md  # what agents may do autonomously
 ```
 
 ## License
